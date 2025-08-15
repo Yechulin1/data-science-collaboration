@@ -17,6 +17,14 @@ import logging
 from datetime import datetime
 import warnings
 
+def calculate_statistics(data):
+    """Calculate basic statistics for dataset."""
+    return {
+        'mean': data.mean(),
+        'std': data.std(),
+        'count': len(data)
+    }
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
